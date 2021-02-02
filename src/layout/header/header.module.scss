@@ -1,0 +1,137 @@
+@import "../../scss/main.scss";
+
+.header {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    background-color: white;
+
+    .content {
+        position: relative;
+        z-index: 100;
+        top: 5vh;
+        color: black;
+        width: 100%;
+        padding: 0 5vw;
+        text-align: center;
+
+        .title {
+            font-weight: $fw-semibold;
+            color: $gray;
+            margin-bottom: 1rem;
+        }
+
+        .heading {
+            font-size: $fs-4xl;
+            font-weight: $fw-bold;
+            margin-bottom: 1.2rem;
+        }
+
+        .description {
+            font-size: $fs-lg;
+            font-weight: $fw-normal;
+            color: $gray;
+            margin-bottom: 3rem;
+        }
+
+        .wrapButton {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .btn {
+                max-width: 12rem;
+                margin: 0 0 1rem 0;
+            }
+
+            .btnTransparent {
+                background-color: transparent;
+                color: $red;
+            }
+        }
+    }
+}
+
+@include responsive(tablet) {
+    .header {
+        background-image: url("../../asset/images/bg-header.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(23, 16, 16, 0.6);
+        }
+
+        .content {
+            top: 15vh;
+            color: white;
+            max-width: 100%;
+            padding: 0 10vw;
+
+            .title {
+                color: inherit;
+            }
+
+            .heading {
+                font-size: $fs-5xl;
+                margin-bottom: 2rem;
+            }
+
+            .description {
+                font-size: $fs-lg;
+                font-weight: $fw-normal;
+                color: inherit;
+                margin-bottom: 3rem;
+            }
+
+            .wrapButton {
+                flex-direction: row;
+                justify-content: center;
+
+                .btn {
+                    min-width: 13rem;
+                    margin: 0 1rem;
+
+                    &:hover {
+                        border-color: white;
+                    }
+                }
+
+                .btnTransparent {
+                    background-color: transparent;
+                    color: white;
+                    border-color: white;
+
+                    &:hover {
+                        background-color: $red;
+                        border-color: $gray;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include responsive(laptop) {
+    .header {
+        .content {
+            padding: 0 20vh;
+
+            .title,
+            .description {
+                font-size: $fs-2xl;
+            }
+
+            .heading {
+                font-size: $fs-6xl * 0.9;
+            }
+        }
+    }
+}

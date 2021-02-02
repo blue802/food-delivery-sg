@@ -1,19 +1,18 @@
-import Navbar from "./layouts/navbar/navbar";
-import Header from "./layouts/header/header";
-import SessionIntro from "./layouts/sessions/sessionIntro";
-import CustomSession from "./layouts/sessions/customSession";
-import SessionDownload from "./layouts/sessions/sessionDownload";
-import SessionForm from "./layouts/sessions/sessionForm";
-import "./App.css";
+import Navbar from "./layout/navbar/navbar";
+import Header from "./layout/header/header";
+import SessionIntro from "./layout/sessions/sessionIntro";
+import CustomSession from "./layout/sessions/customSession";
+import SessionDownload from "./layout/sessions/sessionDownload";
+import SessionForm from "./layout/sessions/sessionForm";
+import "./App.scss";
 import { useEffect, useState } from "react";
 
 import cpLogin from "./asset/images/cp-login.png";
 import cpHome from "./asset/images/cp-home.png";
 import cpPayment from "./asset/images/cp-payment.png";
-import { Box, Heading } from "@chakra-ui/react";
-import Footer from "./layouts/footer/footer";
+import Footer from "./layout/footer/footer";
 
-const breakPoint = 568;
+const breakPoint = 480;
 
 function App() {
     const [widthScreen, setWidthScreen] = useState(window.innerWidth);
@@ -21,27 +20,22 @@ function App() {
     useEffect(() => {
         window.addEventListener("resize", () => {
             setWidthScreen(window.innerWidth);
+            console.log(window.innerWidth);
         });
     });
 
-    const isMobile = () => {
+    const breaking = () => {
         return widthScreen < breakPoint ? true : false;
     };
 
     return (
         <div className="container">
-            <Navbar isMobile={isMobile()} />
-            <Header isMobile={isMobile()} />
+            <Navbar breaking={breaking()} />
+            <Header />
             <SessionIntro />
-            <Box mt="4rem" id="product">
-                <Heading
-                    fontSize={["2xl", "3xl", "5xl", "5xl"]}
-                    textAlign="center"
-                >
-                    How does app work
-                </Heading>
+            <div id="product" className="product">
+                <h2 className="product__heading">How does app work</h2>
                 <CustomSession
-                    isMobile={isMobile()}
                     textSide="right"
                     image={cpLogin}
                     content={{
@@ -53,7 +47,6 @@ function App() {
                     }}
                 />
                 <CustomSession
-                    isMobile={isMobile()}
                     textSide="left"
                     image={cpHome}
                     content={{
@@ -64,7 +57,6 @@ function App() {
                     }}
                 />
                 <CustomSession
-                    isMobile={isMobile()}
                     textSide="right"
                     image={cpPayment}
                     content={{
@@ -74,10 +66,10 @@ function App() {
                             "When you done checkout and get it delivered with ease",
                     }}
                 />
-            </Box>
-            <SessionDownload id="download" isMobile={isMobile()} />
-            <SessionForm isMobile={isMobile()} />
-            <Footer id="contact" isMobile={isMobile()} />
+            </div>
+            <SessionDownload id="download" />
+            <SessionForm />
+            <Footer id="contact" />
         </div>
     );
 }

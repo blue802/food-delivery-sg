@@ -1,0 +1,29 @@
+@import "./scss/main.scss";
+
+.container {
+    background-color: white;
+    min-height: 100vh;
+    overflow: hidden;
+
+    .product {
+        padding-top: 3rem;
+        width: 100%;
+
+        &__heading {
+            font-size: $fs-3xl;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+    }
+}
+
+@include responsive(laptop) {
+    .container {
+        .product {
+            &__heading {
+                margin-bottom: 8rem;
+                font-size: $fs-5xl;
+            }
+        }
+    }
+}

@@ -1,0 +1,165 @@
+@import "../../scss/main.scss";
+
+.wrapForm {
+    padding: 2rem 1rem;
+    background-color: $lightgray;
+
+    h2 {
+        font-size: $fs-3xl;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    h3 {
+        font-size: $fs-2xl;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-size: $fs-sm;
+        font-weight: $fw-medium;
+        margin-bottom: 2rem;
+    }
+
+    .form {
+        .formGrid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 1rem;
+
+            .formGroup {
+                display: flex;
+                flex-direction: column;
+
+                label {
+                    font-size: $fs-md;
+                    font-weight: $fw-semibold;
+                    margin-bottom: 0.5rem;
+                }
+
+                input {
+                    font-size: 16px;
+                    padding: 16px 16px;
+                    border: none;
+                    outline: none;
+                    border-radius: 8px;
+                    background-color: white;
+                    box-shadow: 0 0 16px 16px
+                        rgba($color: lightblue, $alpha: 0.1);
+                }
+
+                .error {
+                    color: $red;
+                    font-size: $fs-sm;
+                    margin-left: 1rem;
+                    font-weight: $fw-normal;
+                }
+            }
+        }
+
+        .formGroupCheckbox {
+            display: flex;
+            flex-direction: column;
+            margin: 1rem 0;
+
+            div {
+                position: relative;
+                padding-left: 30px;
+                margin-bottom: 0.5rem;
+                label {
+                    font-size: $fs-sm;
+                    font-weight: $fw-medium;
+                    .checkIcon {
+                        font-size: 20px;
+                        position: absolute;
+                        z-index: 1;
+                        left: 0;
+                        top: 0;
+                        cursor: pointer;
+                        color: $red;
+                    }
+                }
+                input {
+                    position: absolute;
+                    left: 0;
+                    z-index: 10;
+                    opacity: 0;
+                    height: 0;
+                    width: 0;
+                }
+            }
+        }
+        .btnSubmit {
+            display: block;
+            width: 10rem;
+            border-radius: 8px;
+            margin: 0 auto;
+
+            &:hover {
+                color: $red;
+            }
+        }
+
+        .disabled {
+            opacity: 0.5;
+
+            &:hover {
+                background-color: $red;
+                color: white;
+            }
+        }
+    }
+}
+
+@include responsive(tablet) {
+    .wrapForm {
+        padding: 5rem 10vw;
+        background-color: $lightgray;
+
+        h2 {
+            font-size: $fs-4xl;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        h3 {
+            font-size: $fs-2xl;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: $fs-md;
+            font-weight: $fw-medium;
+            margin-bottom: 3rem;
+        }
+
+        .form {
+            .formGrid {
+                grid-template-columns: repeat(2, 1fr);
+                margin-bottom: 2rem;
+            }
+
+            .formGroupCheckbox {
+                margin: 0 0 3rem 3rem;
+            }
+        }
+    }
+}
+
+@include responsive(laptop) {
+    .wrapForm {
+        h2 {
+            font-size: $fs-5xl;
+            margin-bottom: 5rem;
+        }
+
+        h3 {
+            font-size: $fs-3xl;
+            margin-bottom: 2rem;
+        }
+
+        p {
+            font-size: $fs-lg;
+        }
+    }
+}

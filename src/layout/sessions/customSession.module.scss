@@ -1,0 +1,99 @@
+@import "../../scss/main.scss";
+
+.box {
+    max-width: 80vw;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+
+    .image {
+        flex: 1;
+        margin-bottom: 2rem;
+
+        img {
+            width: 100%;
+            border-radius: 32px;
+            background-color: #f3f3f3;
+            box-shadow: 12px 0px 32px 22px #f3f3f3;
+        }
+    }
+
+    .text {
+        flex: 1;
+        line-height: 1.6;
+        text-align: center;
+
+        h3 {
+            color: $red;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: $fs-3xl;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: $fs-xl;
+            color: $gray;
+        }
+    }
+}
+
+@include responsive(tablet) {
+    .box {
+        margin-bottom: 5rem;
+        flex-direction: row;
+        align-items: center;
+
+        .image {
+            flex: 1;
+            margin-bottom: 2rem;
+
+            img {
+                width: 240px;
+            }
+        }
+
+        .text {
+            text-align: left;
+        }
+    }
+
+    .left {
+        flex-direction: row-reverse;
+
+        .image {
+            text-align: right;
+        }
+    }
+}
+
+@include responsive(laptop) {
+    .box {
+        max-width: 68vw;
+
+        .image {
+            img {
+                width: 380px;
+            }
+        }
+
+        .text {
+            text-align: left;
+
+            h3 {
+                font-size: $fs-xl;
+            }
+
+            h2 {
+                font-size: $fs-5xl;
+            }
+
+            p {
+                font-size: $fs-2xl;
+            }
+        }
+    }
+}

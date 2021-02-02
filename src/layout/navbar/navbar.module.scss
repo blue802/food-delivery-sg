@@ -1,0 +1,117 @@
+@import "../../scss/main.scss";
+
+.navbar {
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: $dark;
+
+    .logo {
+        width: 12rem;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .hstack {
+        display: flex;
+        align-items: center;
+
+        .item {
+            list-style: none;
+            margin: 0 3rem;
+
+            .link {
+                text-decoration: none;
+                color: inherit;
+                font-weight: $fw-semibold;
+
+                &:hover {
+                    color: $red;
+                }
+            }
+
+            .active {
+                color: $red;
+            }
+        }
+    }
+
+    .menuIcon {
+        font-size: $fs-3xl;
+        color: $gray;
+        margin-right: 1rem;
+    }
+
+    .menu {
+        position: absolute;
+        top: -100vh;
+        left: 0;
+        z-index: 100;
+        width: 100vw;
+        text-align: center;
+        transition: all 0.4s;
+
+        .closeIcon {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            color: white;
+            font-size: $fs-3xl;
+        }
+
+        .vstack {
+            padding-top: 20vh;
+            height: 100vh;
+            background-color: $dark;
+
+            .item {
+                list-style: none;
+                margin-bottom: 3rem;
+                color: white;
+
+                .link {
+                    text-decoration: none;
+                    color: inherit;
+                    font-size: $fs-2xl;
+                    font-weight: $fw-semibold;
+                }
+
+                .active {
+                    color: $red;
+                }
+            }
+        }
+    }
+
+    .showing {
+        top: 0;
+    }
+}
+@include responsive(tablet) {
+    .navbar {
+        .hstack {
+            .item {
+                margin: 0 1.5rem;
+            }
+        }
+    }
+}
+
+@include responsive(laptop) {
+    .navbar {
+        .logo {
+            width: 13rem;
+        }
+
+        .hstack {
+            .item {
+                margin: 0 3rem;
+            }
+        }
+    }
+}
