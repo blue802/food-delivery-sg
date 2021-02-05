@@ -12,7 +12,7 @@ import cpHome from "./asset/images/cp-home.png";
 import cpPayment from "./asset/images/cp-payment.png";
 import Footer from "./layout/footer/footer";
 
-const breakPoint = 480;
+const breakPoint = 560;
 
 function App() {
     const [widthScreen, setWidthScreen] = useState(window.innerWidth);

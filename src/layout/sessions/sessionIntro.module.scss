@@ -2,12 +2,12 @@
 
 .wrapBox {
     width: 100%;
-    height: 50vh;
+    height: 24rem;
     border-bottom: 4px solid $semigray;
 
     .box {
-        width: 375px;
         height: 100%;
+        max-width: 375px;
         margin: 0 auto;
         position: relative;
         top: 0;
@@ -30,7 +30,7 @@
         }
 
         .cpRightSide {
-            top: -2rem;
+            top: -3rem;
             right: 0;
         }
     }
@@ -38,26 +38,10 @@
 
 @include responsive(tablet) {
     .wrapBox {
-        height: 44vh;
+        height: 26rem;
 
         .box {
-            width: 60vw;
-
-            .cpLeftSide,
-            .cpRightSide {
-                width: 51.2%;
-                position: absolute;
-            }
-
-            .cpLeftSide {
-                top: -10rem;
-                left: 0;
-            }
-
-            .cpRightSide {
-                top: -6rem;
-                right: 0;
-            }
+            width: 30rem;
         }
     }
 }
@@ -65,10 +49,11 @@
 @include responsive(laptop) {
     .wrapBox {
         height: 80vh;
-        max-height: 720px;
+        height: 30rem;
 
         .box {
             width: 50vw;
+            max-width: 28rem;
         }
     }
 }

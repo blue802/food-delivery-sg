@@ -1,7 +1,8 @@
 @import "../../scss/main.scss";
 
 .box {
-    max-width: 80vw;
+    width: 80vw;
+    max-width: 22.5rem;
     margin: 0 auto;
     margin-bottom: 5rem;
     display: flex;
@@ -43,6 +44,7 @@
 
 @include responsive(tablet) {
     .box {
+        max-width: 50rem;
         margin-bottom: 5rem;
         flex-direction: row;
         align-items: center;
@@ -72,7 +74,7 @@
 
 @include responsive(laptop) {
     .box {
-        max-width: 68vw;
+        max-width: 80rem;
 
         .image {
             img {

@@ -111,6 +111,7 @@ function SessionForm() {
                         <input
                             type="text"
                             id="fullName"
+                            name="fullName"
                             value={fullName.value}
                             onChange={_onHandleFullName}
                         />
@@ -127,6 +128,7 @@ function SessionForm() {
                         <input
                             type="tel"
                             id="phone"
+                            name="phone"
                             value={phone.value}
                             onChange={_onHandlePhone}
                             placeholder="(+84)"
@@ -144,6 +146,7 @@ function SessionForm() {
                         <input
                             type="text"
                             id="email"
+                            name="email"
                             value={email.value}
                             onChange={_onHandleEmail}
                         />
@@ -153,6 +156,7 @@ function SessionForm() {
                         <input
                             type="text"
                             id="address"
+                            name="address"
                             value={address.value}
                             onChange={_onHandleAddress}
                         />
@@ -171,6 +175,8 @@ function SessionForm() {
                         <input
                             type="checkbox"
                             id="option1"
+                            name="option1"
+                            value=""
                             onChange={() =>
                                 setListchecked([
                                     !listchecked[0],
@@ -191,6 +197,8 @@ function SessionForm() {
                         <input
                             type="checkbox"
                             id="option2"
+                            name="option2"
+                            value=""
                             onChange={() =>
                                 setListchecked([
                                     listchecked[0],
