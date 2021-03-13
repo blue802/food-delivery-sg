@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/food-delivery-sg/static/css/main.973a42ee.chunk.css",
+    "main.js": "/food-delivery-sg/static/js/main.b7d81b48.chunk.js",
+    "main.js.map": "/food-delivery-sg/static/js/main.b7d81b48.chunk.js.map",
+    "runtime-main.js": "/food-delivery-sg/static/js/runtime-main.0177454b.js",
+    "runtime-main.js.map": "/food-delivery-sg/static/js/runtime-main.0177454b.js.map",
+    "static/js/2.fa63bd88.chunk.js": "/food-delivery-sg/static/js/2.fa63bd88.chunk.js",
+    "static/js/2.fa63bd88.chunk.js.map": "/food-delivery-sg/static/js/2.fa63bd88.chunk.js.map",
+    "index.html": "/food-delivery-sg/index.html",
+    "static/css/main.973a42ee.chunk.css.map": "/food-delivery-sg/static/css/main.973a42ee.chunk.css.map",
+    "static/js/2.fa63bd88.chunk.js.LICENSE.txt": "/food-delivery-sg/static/js/2.fa63bd88.chunk.js.LICENSE.txt",
+    "static/media/header.module.scss": "/food-delivery-sg/static/media/bg-header.9f0eb2db.jpeg",
+    "static/media/sessionDownload.module.scss": "/food-delivery-sg/static/media/bg-session.3a391409.jpeg",
+    "static/media/cp-home.0bf43196.png": "/food-delivery-sg/static/media/cp-home.0bf43196.png",
+    "static/media/cp-left-side.ab367916.png": "/food-delivery-sg/static/media/cp-left-side.ab367916.png",
+    "static/media/cp-login.fe582737.png": "/food-delivery-sg/static/media/cp-login.fe582737.png",
+    "static/media/cp-payment.62a7eb8e.png": "/food-delivery-sg/static/media/cp-payment.62a7eb8e.png",
+    "static/media/cp-right-side.289d9cea.png": "/food-delivery-sg/static/media/cp-right-side.289d9cea.png",
+    "static/media/logo.bc01b3fb.png": "/food-delivery-sg/static/media/logo.bc01b3fb.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0177454b.js",
+    "static/js/2.fa63bd88.chunk.js",
+    "static/css/main.973a42ee.chunk.css",
+    "static/js/main.b7d81b48.chunk.js"
+  ]
+}
